@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Teleprompter View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TeleprompterViewController" customModule="Teleprompter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7b3-I8-OKN">
+                                <rect key="frame" x="0.0" y="790" width="402" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="play" id="iiW-XR-oOM">
+                                        <connections>
+                                            <action selector="playButton:" destination="BYZ-38-t0r" id="xSF-oe-d7P"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="pause" id="rci-PT-O97">
+                                        <connections>
+                                            <action selector="pauseButton:" destination="BYZ-38-t0r" id="paz-Wy-AT0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="stop" id="CxZ-QR-epf">
+                                        <connections>
+                                            <action selector="stopButton:" destination="BYZ-38-t0r" id="qU2-l5-0it"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="refresh" id="58d-BI-oBw">
+                                        <connections>
+                                            <action selector="flipButton:" destination="BYZ-38-t0r" id="LLO-6f-C9s"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="luF-yy-sJN">
+                                <rect key="frame" x="47" y="97" width="295" height="675.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">A teleprompter  is a display device that prompts the person speaking with an electronic visual text of a speech or script. Using a teleprompter is similar to using cue cards. The screen is in front of, and usually below, the lens of a professional video camera, and the words on the screen are reflected to the eyes of the presenter using a sheet of clear glass or a specially prepared beam splitter. Light from the performer passes through the front side of the glass into the lens, while a shroud surrounding the lens and the back side of the glass prevents unwanted light from entering the lens.
+
+Because the speaker does not need to look down to consult written notes, the teleprompter creates the illusion that the speaker has memorized the speech or is speaking spontaneously, looking directly into the camera lens. Cue cards, on the other hand, are always placed away from the lens axis, making the speaker look at a point beside the camera, which leaves an impression of distraction."</mutableString>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXF-E1-gRt">
+                                <rect key="frame" x="36" y="56" width="59" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eXF-E1-gRt" secondAttribute="bottom" constant="785" id="MfV-TB-T7v"/>
+                            <constraint firstItem="eXF-E1-gRt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="RjG-d1-Est"/>
+                            <constraint firstItem="7b3-I8-OKN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Stv-MD-9PV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7b3-I8-OKN" secondAttribute="bottom" constant="28" id="ZJy-PC-mTy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eXF-E1-gRt" secondAttribute="trailing" constant="336" id="aAL-Av-p30"/>
+                            <constraint firstItem="eXF-E1-gRt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="cOM-Ab-jrf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7b3-I8-OKN" secondAttribute="trailing" constant="12" id="ejh-7v-FNZ"/>
+                            <constraint firstItem="7b3-I8-OKN" firstAttribute="firstBaseline" secondItem="luF-yy-sJN" secondAttribute="baseline" constant="11" symbolType="layoutAnchor" id="gOI-2g-vBX"/>
+                            <constraint firstItem="luF-yy-sJN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="nVw-dp-DF0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="luF-yy-sJN" secondAttribute="trailing" constant="72" id="ojg-nb-aaq"/>
+                            <constraint firstItem="luF-yy-sJN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="qc4-jt-QAF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="luF-yy-sJN" id="9Oz-JK-NPr"/>
+                        <outlet property="timer" destination="eXF-E1-gRt" id="zfj-3a-zSU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
+        </scene>
+    </scenes>
+</document>
